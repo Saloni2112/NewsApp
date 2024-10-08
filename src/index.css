@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+#newsImage{
+    height: 50vh;
+    /* object-fit: contain; */
+    padding: 5px;
+}
+
+#themeBtn{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    height: 55px;
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 30px;
+}
+#slid-img{
+    object-fit: contain;
+    height: 50vh;
+}
