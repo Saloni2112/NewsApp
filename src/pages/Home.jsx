@@ -27,7 +27,7 @@ if (!newsData || newsData.length === 0) {
   toast.error(" kindly search valid News")
   // <h1 className='text-center'>TOP NEWS</h1>
 }
-else if(newsData.length === 0 || !newsData){
+else if(newsData?.length === 0 || !newsData){
   // <h1 className='text-center display1'>Loading...</h1>
   getNews("India")
 }
