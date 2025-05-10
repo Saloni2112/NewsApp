@@ -45,7 +45,7 @@ else if(newsData.length === 0 || !newsData){
       <Weathercard/>
         </div>
       {
-        !newsData || newsData.length === 0 ? (
+        !newsData || newsData?.length === 0 ? (
         <h1 className="text-center display-5 text-secondary">Loding...</h1>
         ) : 
         (
