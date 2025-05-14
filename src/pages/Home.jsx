@@ -23,7 +23,7 @@ useEffect(() => {
 getNews("Indore")
 },[])
 
-if (!newsData || newsData.length === 0) {
+if (!newsData || newsData?.length === 0) {
   toast.error(" kindly search valid News")
   // <h1 className='text-center'>TOP NEWS</h1>
 }

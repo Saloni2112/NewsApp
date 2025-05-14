@@ -10,7 +10,7 @@ const {newsData}= useContext(NewsContext)
     <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true">
   <div className="carousel-inner">
     {
-        newsData.length>0 && newsData.map((news,index)=>{
+        newsData?.length>0 && newsData.map((news,index)=>{
             return(
                 <div className={index === 0 ? "carousel-item active" : "carousel-item"}>
       <img id='slid-img' src={news.urlToImage || "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fwhatsapp-dp--583708801711867038%2F&psig=AOvVaw3jILVcJ_NUl6Y6q-VotG3b&ust=1728377132950000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKis-YLx-4gDFQAAAAAdAAAAABAE"} className="d-block w-100" alt="..."/>
