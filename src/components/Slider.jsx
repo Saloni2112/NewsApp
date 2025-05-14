@@ -5,6 +5,15 @@ const Slider = () => {
 
 const {newsData}= useContext(NewsContext)
 
+
+  if (!newsData) {
+    return (
+      <div className="text-center p-5">
+        <h5><span className="spinner-border spinner-border-sm" /> Loading News...</h5>
+      </div>
+    );
+  }
+
   return (
     <>
     <div id="carouselExampleRide" className="carousel slide" data-bs-ride="true">
