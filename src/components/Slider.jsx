@@ -4,15 +4,8 @@ import NewsContext from '../providers/News/NewsContext'
 const Slider = () => {
 
 const {newsData}= useContext(NewsContext)
-
-
-  if (!newsData) {
-    return (
-      <div className="text-center p-5">
-        <h5><span className="spinner-border spinner-border-sm" /> Loading News...</h5>
-      </div>
-    );
-  }
+ console.log(newsData,"newsData in slider")
+// const [newsData, setNewsData] = useState([])
 
   return (
     <>
@@ -22,7 +15,7 @@ const {newsData}= useContext(NewsContext)
         newsData?.length>0 && newsData.map((news,index)=>{
             return(
                 <div className={index === 0 ? "carousel-item active" : "carousel-item"}>
-      <img id='slid-img' src={news.urlToImage || "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fwhatsapp-dp--583708801711867038%2F&psig=AOvVaw3jILVcJ_NUl6Y6q-VotG3b&ust=1728377132950000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKis-YLx-4gDFQAAAAAdAAAAABAE"} className="d-block w-100" alt="..."/>
+      <img id='slid-img' src={news.image || "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fwhatsapp-dp--583708801711867038%2F&psig=AOvVaw3jILVcJ_NUl6Y6q-VotG3b&ust=1728377132950000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKis-YLx-4gDFQAAAAAdAAAAABAE"} className="d-block w-100" alt="..."/>
     </div>
             )
         })
